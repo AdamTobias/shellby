@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+// ehtan
+
 func main() {
 	// what is os.Stdin
 	reader := bufio.NewReader(os.Stdin)
