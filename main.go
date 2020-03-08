@@ -16,10 +16,14 @@ func main() {
 		// why do I have to hit enter?
 		fmt.Print("s: ")
 		text, err := reader.ReadString('\n')
-		if err == io.EOF {
-			fmt.Print("\nSee ya!\n")
+		if err != nil {
+			if err == io.EOF {
+				fmt.Println("\nSee ya!")
+			} else {
+				fmt.Println("\nEncountered err: ", err)
+			}
 			return
 		}
-		fmt.Print(text, "blah", err)
+		fmt.Print(text)
 	}
 }
